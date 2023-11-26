@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.example.uf1_proyecto.databinding.FragmentCharacterGalleryBinding
 
 class CharacterGalleryFragment : Fragment() {
@@ -19,6 +20,7 @@ class CharacterGalleryFragment : Fragment() {
 
         binding.button.setOnClickListener {
             //go to character editor activity
+            view.findNavController().navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
 
         }
 
