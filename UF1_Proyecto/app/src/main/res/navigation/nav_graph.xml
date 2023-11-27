@@ -3,11 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainSheetViewFragment">
-
+    app:startDestination="@id/characterEditorActivity">
+    <activity
+        android:id="@+id/characterEditorActivity"
+        android:name="com.example.uf1_proyecto.CharacterEditorActivity"
+        android:label="activity_character_editor"
+        tools:layout="@layout/activity_character_editor" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.uf1_proyecto.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
     <fragment
-        android:id="@+id/mainSheetViewFragment"
-        android:name="com.example.uf1_proyecto.MainSheetViewFragment"
-        android:label="fragment_main_sheet_view"
-        tools:layout="@layout/fragment_main_sheet_view" />
+        android:id="@+id/characterGalleryFragment"
+        android:name="com.example.uf1_proyecto.CharacterGalleryFragment"
+        android:label="fragment_character_gallery"
+        tools:layout="@layout/fragment_character_gallery" >
+        <action
+            android:id="@+id/action_characterGalleryFragment_to_characterEditorActivity"
+            app:destination="@id/characterEditorActivity"
+            app:popUpTo="@id/characterGalleryFragment" />
+    </fragment>
 </navigation>
