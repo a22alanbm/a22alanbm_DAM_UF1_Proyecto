@@ -6,25 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.uf1_proyecto.databinding.FragmentCharacterGalleryBinding
 
 class CharacterGalleryFragment : Fragment() {
-    lateinit var binding_: FragmentCharacterGalleryBinding
-    val binding = binding_!!
-    val view = binding.root
+    //private var _binding: FragmentCharacterGalleryBinding? = null
+
+    //private val binding get() = _binding!!
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //val view = binding?.root
 
-        binding.button.setOnClickListener {
+        //binding?.button?.setOnClickListener {
             //go to character editor activity
-            view.findNavController().navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
+            val view = inflater.inflate(R.layout.fragment_character_gallery, container, false)
+            var button = view.findViewById<View>(R.id.button)
 
-        }
+            button.setOnClickListener {
+                //val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+                //val navController = navHostFragment.navController
+                var navController = view.findNavController()
+                navController.navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
+            }
 
-        return inflater.inflate(R.layout.fragment_character_gallery, container, false)
+        //}
+        return view
     }
 
 }

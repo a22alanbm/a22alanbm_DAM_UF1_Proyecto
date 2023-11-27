@@ -21,6 +21,7 @@
         tools:layout="@layout/fragment_character_gallery" >
         <action
             android:id="@+id/action_characterGalleryFragment_to_characterEditorActivity"
-            app:destination="@id/characterEditorActivity" />
+            app:destination="@id/characterEditorActivity"
+            app:popUpTo="@id/characterGalleryFragment" />
     </fragment>
 </navigation>
