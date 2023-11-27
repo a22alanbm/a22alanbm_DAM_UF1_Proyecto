@@ -1,13 +1,12 @@
 package com.example.uf1_proyecto
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import com.example.uf1_proyecto.databinding.FragmentCharacterGalleryBinding
+
 
 class CharacterGalleryFragment : Fragment() {
     //private var _binding: FragmentCharacterGalleryBinding? = null
@@ -28,9 +27,9 @@ class CharacterGalleryFragment : Fragment() {
             var button = view.findViewById<View>(R.id.button)
 
             button.setOnClickListener {
-                //val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
-                //val navController = navHostFragment.navController
-                var navController = view.findNavController()
+                val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+                val navController = navHostFragment.navController
+                //var navController = view.findNavController()
                 navController.navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
             }
 
