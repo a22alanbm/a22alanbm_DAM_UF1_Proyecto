@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 
 
@@ -27,10 +28,9 @@ class CharacterGalleryFragment : Fragment() {
             var button = view.findViewById<View>(R.id.button)
 
             button.setOnClickListener {
-                val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
-                val navController = navHostFragment.navController
-                //var navController = view.findNavController()
-                navController.navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
+                //val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+                //val navController = navHostFragment.navController
+                view.findNavController().navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
             }
 
         //}

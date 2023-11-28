@@ -11,9 +11,9 @@
         app:showAsAction="always" />
 
      <item
-       android:id="@+id/messageFragment"
+         android:id="@+id/loginActivity"
         android:icon="@android:drawable/ic_menu_send"
-        android:title="Sent Items"
+        android:title="characterGalley"
         app:showAsAction="always" />
  </group>
     <item android:title="Support">
