@@ -30,7 +30,9 @@ class CharacterGalleryFragment : Fragment() {
             button.setOnClickListener {
                 //val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
                 //val navController = navHostFragment.navController
-                view.findNavController().navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity)
+                view.findNavController().navigate(R.id.action_characterGalleryFragment_to_characterEditorActivity2)
+                //view.findNavController().navigate(R.id.action_characterGalleryFragment_to_character_nav_graph)
+
             }
 
         //}

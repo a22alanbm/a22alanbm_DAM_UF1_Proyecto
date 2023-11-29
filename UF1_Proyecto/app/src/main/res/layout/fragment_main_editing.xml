@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainEditingFragment"
     android:orientation="vertical"
-    app:navGraph="@navigation/nav_graph"
+    app:navGraph="@navigation/character_nav_graph"
     app:defaultNavHost="true"
     >
 <!--  android:background="@drawable/fullviewcharactersheet" -->

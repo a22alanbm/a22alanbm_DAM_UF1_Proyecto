@@ -5,6 +5,11 @@
     android:id="@+id/character_nav_graph"
     app:startDestination="@id/mainEditingFragment">
 
+    <activity
+        android:id="@+id/characterEditorActivity"
+        android:name="com.example.uf1_proyecto.CharacterEditorActivity"
+        android:label="activity_character_editor"
+        tools:layout="@layout/activity_character_editor" />
     <fragment
         android:id="@+id/mainEditingFragment"
         android:name="com.example.uf1_proyecto.MainEditingFragment"

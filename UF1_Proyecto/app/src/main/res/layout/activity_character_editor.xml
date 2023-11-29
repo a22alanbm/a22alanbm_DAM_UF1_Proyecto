@@ -85,15 +85,13 @@
         </androidx.appcompat.widget.Toolbar>
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:visibility="visible"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:id="@+id/sheet_container_view"
                     android:name="androidx.navigation.fragment.NavHostFragment"
                     app:navGraph="@navigation/character_nav_graph"
-                    app:defaultNavHost="true"
                     />
-
+<!-- android:name="com.example." -->
 
 
 
