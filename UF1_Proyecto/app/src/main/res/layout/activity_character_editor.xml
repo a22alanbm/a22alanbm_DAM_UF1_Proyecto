@@ -54,9 +54,8 @@
 
                 <Button
                     android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:background="@color/black"
-                    />
+                    android:layout_height="142dp"
+                    android:background="@color/black" />
                 <Button
                     android:layout_width="10dp"
                     android:layout_height="10dp"
