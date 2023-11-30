@@ -8,12 +8,14 @@
         android:id="@+id/inboxFragment"
         android:icon="@android:drawable/ic_dialog_email"
         android:title="Inbox"
+        android:textColor="@color/moraro"
         app:showAsAction="always" />
 
      <item
-         android:id="@+id/loginActivity"
+         android:id="@+id/homeFragment"
         android:icon="@android:drawable/ic_menu_send"
-        android:title="characterGalley"
+         android:textColor="@color/moraro"
+        android:title="Home"
         app:showAsAction="always" />
  </group>
     <item android:title="Support">
@@ -21,6 +23,7 @@
             <item
                 android:id="@+id/helpFragment"
                 android:icon="@android:drawable/ic_menu_help"
+                android:textColor="@color/moraro"
                 android:title="Help"
                 app:showAsAction="always" />
         </menu>

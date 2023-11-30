@@ -3,29 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/characterGalleryFragment">
+    app:startDestination="@id/loginFragment">
 
-    <fragment
-        android:id="@+id/characterGalleryFragment"
-        android:name="com.example.uf1_proyecto.CharacterGalleryFragment"
-        android:label="fragment_character_gallery"
-        tools:layout="@layout/fragment_character_gallery" >
-        <action
-            android:id="@+id/action_characterGalleryFragment_to_character_nav_graph"
-            app:destination="@id/character_nav_graph"
-            app:popUpTo="@id/characterGalleryFragment" />
-        <action
-            android:id="@+id/action_characterGalleryFragment_to_characterEditorActivity2"
-            app:destination="@id/characterEditorActivity2" />
-    </fragment>
     <activity
         android:id="@+id/loginActivity"
         android:name="com.example.uf1_proyecto.LoginActivity"
         android:label="LoginActivity" />
-    <include app:graph="@navigation/character_nav_graph" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.uf1_proyecto.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
     <activity
-        android:id="@+id/characterEditorActivity2"
-        android:name="com.example.uf1_proyecto.CharacterEditorActivity"
-        android:label="activity_character_editor"
-        tools:layout="@layout/activity_character_editor" />
+        android:id="@+id/mainActivity"
+        android:name="com.example.uf1_proyecto.MainActivity"
+        android:label="MainActivity" />
 </navigation>

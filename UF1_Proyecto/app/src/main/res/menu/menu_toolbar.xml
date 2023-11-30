@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/rosita"
     >
 
     <item android:title="My personal space">
+
+
         <menu>
             <item
                 android:id="@+id/closet"
                 android:title="Closet"
+                android:textColor="@color/moraro"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/wallet"
                 android:title="Wallet"
+                android:textColor="@color/moraro"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/photos"
                 android:title="Photos"
+                android:textColor="@color/moraro"
                 app:showAsAction="always" />
         </menu>
     </item>

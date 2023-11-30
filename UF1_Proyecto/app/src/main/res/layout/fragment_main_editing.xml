@@ -8,14 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainEditingFragment"
     android:orientation="vertical"
-    app:navGraph="@navigation/character_nav_graph"
-    app:defaultNavHost="true"
+    android:background="@drawable/fullviewcharactersheet"
     >
-<!--  android:background="@drawable/fullviewcharactersheet" -->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/fullviewcharactersheet"
-/>
 
 </LinearLayout>

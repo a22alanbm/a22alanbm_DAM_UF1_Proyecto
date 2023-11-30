@@ -2,17 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/character_nav_graph"
+    android:id="@+id/char_nav_graph"
     app:startDestination="@id/mainEditingFragment">
 
-    <activity
-        android:id="@+id/characterEditorActivity"
-        android:name="com.example.uf1_proyecto.CharacterEditorActivity"
-        android:label="activity_character_editor"
-        tools:layout="@layout/activity_character_editor" />
     <fragment
         android:id="@+id/mainEditingFragment"
         android:name="com.example.uf1_proyecto.MainEditingFragment"
-        android:label="fragment_main_editing"
+        android:label=""
         tools:layout="@layout/fragment_main_editing" />
 </navigation>

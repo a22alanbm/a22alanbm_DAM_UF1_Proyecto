@@ -2,6 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.UF1_Proyecto" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">#E0B0FF</item>
+        <item name="colorPrimary">@color/rosita</item>
     </style>
 </resources>

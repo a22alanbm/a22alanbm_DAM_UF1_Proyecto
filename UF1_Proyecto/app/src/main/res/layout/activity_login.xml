@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+    <androidx.fragment.app.FragmentContainerView
+
     android:id="@+id/login_container_view"
 
     android:name="androidx.navigation.fragment.NavHostFragment"
@@ -11,6 +18,46 @@
     android:orientation="vertical"
     app:navGraph="@navigation/nav_graph"
     app:defaultNavHost="true"
-    >
+    />
 
-    </androidx.fragment.app.FragmentContainerView>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/rosita"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/login_container_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/thx" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/barra" />
+
+        <ImageButton
+            android:id="@+id/nosolorolButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@color/rosita"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/nosolorol" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comicsans"
+            android:text="Agradecimientos"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <!--  https://www.youtube.com/watch?v=PTejW6z0szc  -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
