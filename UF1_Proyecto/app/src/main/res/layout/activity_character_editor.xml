@@ -15,7 +15,7 @@
     android:id="@+id/drawer_layout"
     >
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -27,33 +27,32 @@
             android:layout_height="80dp"
             android:background="@color/moraro"
 
-            >
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/imageButtonLeft"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_gravity="left"
-                android:src="@drawable/logoadomleft"
-                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
                 android:background="@color/moraro"
-                app:showAsAction="always"
-                />
+                android:scaleType="centerCrop"
+                android:src="@drawable/logoadomleft"
+                app:showAsAction="always" />
 
 
             <ImageButton
                 android:id="@+id/imageButtonRight"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_gravity="right"
-                android:src="@drawable/logoadomright"
-                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
                 android:background="@color/moraro"
-                app:showAsAction="always"
-                />
-<!--
+                android:scaleType="centerCrop"
+                android:src="@drawable/logoadomright"
+                app:showAsAction="always" />
+            <!--
             <androidx.appcompat.widget.ActionMenuView
                 android:id="@+id/actionMenuView"
                 android:layout_width="60dp"
@@ -83,25 +82,31 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-                <androidx.fragment.app.FragmentContainerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/sheet_container_view"
-                    android:name="androidx.navigation.fragment.NavHostFragment"
-                    app:defaultNavHost="true"
-                    app:navGraph="@navigation/char_nav_graph"
-                    />
-<!-- android:name="com.example." -->
+        <!-- android:name="com.example." -->
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/sheet_container_view"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+
+            app:navGraph="@navigation/char_nav_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
+            android:background="@color/moraro"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/menu_bottom"
-
             />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.google.android.material.navigation.NavigationView
