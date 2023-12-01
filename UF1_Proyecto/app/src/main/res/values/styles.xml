@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyBottomNavigation">
+        <item name="itemBackground">@color/rosita</item>
+        <!--<item name="itemIconTint">@color/bottom_navigation_selector</item>-->
+        <item name="itemTextColor">@color/rosita</item>
+        <item name="android:background">@color/rosita</item>
+
+
+    </style>
+
+
+</resources>

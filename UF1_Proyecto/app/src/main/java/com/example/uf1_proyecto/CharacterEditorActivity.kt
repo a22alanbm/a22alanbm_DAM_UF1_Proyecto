@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.ActionBar.DISPLAY_USE_LOGO
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.size
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -13,6 +15,7 @@ import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.example.uf1_proyecto.R.color.moraro
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -22,10 +25,12 @@ class CharacterEditorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_character_editor)
         //Hacer nuestra barra de actividad nuestra barra principal
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar.setNavigationIcon(getDrawable(R.drawable.puntitos) )
         toolbar.overflowIcon= getDrawable(R.drawable.puntitos)
+        toolbar.collapseIcon= getDrawable(R.drawable.puntitos)
+
         setSupportActionBar(toolbar?:return)
         getSupportActionBar()?.setDisplayShowTitleEnabled(false);
-        getSupportActionBar()?.setDisplayUseLogoEnabled(true);
 
         // Controlador de navegación - Host de navegación (grafo asociado)
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.sheet_container_view) as NavHostFragment
@@ -43,7 +48,14 @@ class CharacterEditorActivity : AppCompatActivity() {
         navigationView.setupWithNavController(navController)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNav.setupWithNavController(navController)
+        bottomNav.itemIconSize=200
+        val color: Int = resources.getColor(R.color.moraro)
+        //bottomNav.itemBackground = color
+        //val atras =  findViewById<>(R.id.atras)
+        //atras.setOnClickListener {
+          //navController.popBackStack()
+        //}
+        //bottomNav.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
