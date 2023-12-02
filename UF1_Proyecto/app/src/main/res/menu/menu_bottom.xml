@@ -10,6 +10,7 @@
         android:background="@color/rosita"
         android:icon="@drawable/logoadom2"
         android:id="@+id/atras"
+        android:title="atras"
         app:showAsAction="always"
         />
     <!--android:title="Atrás"-->
