@@ -10,7 +10,7 @@
     <item
 
         android:background="@color/rosita"
-        android:icon="@drawable/logoadom2"
+        android:icon="@drawable/logoadomatras"
         android:id="@+id/atras"
         android:title="atras"
         app:showAsAction="always"
