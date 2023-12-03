@@ -2,23 +2,28 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:labelVisibilityMode="unlabeled"
     android:fillColor="@color/rosita">
 
 
 <group>
     <item
+
         android:background="@color/rosita"
         android:icon="@drawable/logoadom2"
         android:id="@+id/atras"
         android:title="atras"
         app:showAsAction="always"
+        app:labelVisibilityMode="unlabeled"
         />
     <!--android:title="Atrás"-->
 
     <item
+        app:labelVisibilityMode="unlabeled"
         android:title="Help"
         app:showAsAction="always" />
     <item
+        app:labelVisibilityMode="unlabeled"
         android:title="Sent Items"
         app:showAsAction="always" />
 
