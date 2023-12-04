@@ -21,9 +21,9 @@ class CharacterEditorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_character_editor)
         //Hacer nuestra barra de actividad nuestra barra principal
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        toolbar.setNavigationIcon(getDrawable(R.drawable.puntitos) )
-        toolbar.overflowIcon= getDrawable(R.drawable.puntitos)
-        toolbar.collapseIcon= getDrawable(R.drawable.puntitos)
+        toolbar.setNavigationIcon(getDrawable(R.drawable.puntitos2) )
+        toolbar.overflowIcon= getDrawable(R.drawable.puntitos2)
+        toolbar.collapseIcon= getDrawable(R.drawable.puntitos2)
 
         setSupportActionBar(toolbar?:return)
         getSupportActionBar()?.setDisplayShowTitleEnabled(false);

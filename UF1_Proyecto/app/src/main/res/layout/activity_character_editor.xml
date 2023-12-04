@@ -51,7 +51,8 @@
                 android:background="@color/moraro"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logoadomright"
-                app:showAsAction="always" />
+                app:showAsAction="always"
+                 /><!--app:tint="@color/black"-->
             <!--
             <androidx.appcompat.widget.ActionMenuView
                 android:id="@+id/actionMenuView"

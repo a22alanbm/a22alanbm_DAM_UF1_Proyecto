@@ -10,10 +10,9 @@
     <item
 
         android:background="@color/rosita"
-        android:icon="@drawable/logoadomatras"
+        android:icon="@drawable/logoadomatras2"
         android:id="@+id/atras"
         android:title="atras"
-        app:showAsAction="always"
         app:labelVisibilityMode="unlabeled"
         />
     <!--android:title="Atrás"-->
