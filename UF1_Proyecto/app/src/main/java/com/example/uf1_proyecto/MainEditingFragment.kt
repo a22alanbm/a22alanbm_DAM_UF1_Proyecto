@@ -22,8 +22,7 @@ class MainEditingFragment : Fragment() {
 
         var BotonHitos = view?.findViewById<View>(R.id.hitosFloatingActionButton)
         BotonHitos?.setOnClickListener {
-            var navController = findNavController()
-            navController?.navigate(R.id.action_mainEditingFragment_to_pitosYFlautasFragment)
+            view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_pitosYFlautasFragment)
         }
 
         return inflater.inflate(R.layout.fragment_main_editing, container, false)
