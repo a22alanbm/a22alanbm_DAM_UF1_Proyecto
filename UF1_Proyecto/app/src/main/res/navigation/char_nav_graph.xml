@@ -8,16 +8,14 @@
     <fragment
         android:id="@+id/mainEditingFragment"
         android:name="com.example.uf1_proyecto.MainEditingFragment"
-        android:label=""
         tools:layout="@layout/fragment_main_editing" >
         <action
             android:id="@+id/action_mainEditingFragment_to_pitosYFlautasFragment"
             app:destination="@id/pitosYFlautasFragment"
-            app:popUpTo="@id/char_nav_graph" />
+            app:popUpTo="@id/pitosYFlautasFragment" />
     </fragment>
     <fragment
         android:id="@+id/pitosYFlautasFragment"
         android:name="com.example.uf1_proyecto.PitosYFlautasFragment"
-        android:label="fragment_pitos_y_flautas"
         tools:layout="@layout/fragment_pitos_y_flautas" />
 </navigation>

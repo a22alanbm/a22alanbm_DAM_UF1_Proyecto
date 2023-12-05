@@ -18,14 +18,14 @@ class MainEditingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
+        var view = inflater.inflate(R.layout.fragment_main_editing, container, false)
 
         var BotonHitos = view?.findViewById<View>(R.id.hitosFloatingActionButton)
         BotonHitos?.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_pitosYFlautasFragment)
         }
 
-        return inflater.inflate(R.layout.fragment_main_editing, container, false)
+        return view
     }
 
 }

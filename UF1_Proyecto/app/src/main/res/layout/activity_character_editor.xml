@@ -110,7 +110,7 @@
             <com.google.android.material.bottomappbar.BottomAppBar
                 android:id="@+id/bottomBar"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="@color/rosita"
                 app:labelVisibilityMode="unlabeled"

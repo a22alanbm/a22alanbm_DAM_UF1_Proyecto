@@ -13,9 +13,9 @@
         android:background="@color/rosita"
         android:id="@+id/goBack"
         android:iconTint="@color/black"
-        app:labelVisibilityMode="unlabeled"
-        android:icon="@drawable/logoadomatras2"
+        android:scaleType="centerInside"
+        android:icon="@drawable/logoadomatras"
         android:title="Back"
-        app:showAsAction="always" />
+        app:showAsAction="always"/>
 </group>
 </menu>

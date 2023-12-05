@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.get
+import androidx.core.view.size
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -46,6 +47,8 @@ class CharacterEditorActivity : AppCompatActivity() {
         navigationView.setupWithNavController(navController)
 
         var bottomAppBar = findViewById<BottomAppBar>(R.id.bottomBar)
+        var atras = bottomAppBar.menu.getItem(0)
+        atras.setIcon(R.drawable.logoadomatras2)
 
         bottomAppBar.setNavigationOnClickListener {
             // Handle navigation icon press
@@ -55,9 +58,7 @@ class CharacterEditorActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.goBack -> {
                     // Handle search icon press
-                    Toast.makeText(this, "Go Back", Toast.LENGTH_SHORT).show()
-                    var navControllerBack = findNavController(R.id.sheet_container_view)
-                    navControllerBack.popBackStack()
+                    onBackPressedDispatcher.onBackPressed()
                     true
                 }
 
