@@ -3,28 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:labelVisibilityMode="unlabeled"
+    android:background="@color/rosita"
     android:fillColor="@color/rosita">
 
 
 <group>
-    <item
 
+    <item
         android:background="@color/rosita"
+        android:id="@+id/goBack"
+        android:iconTint="@color/black"
+        app:labelVisibilityMode="unlabeled"
         android:icon="@drawable/logoadomatras2"
-        android:id="@+id/atras"
-        android:title="atras"
-        app:labelVisibilityMode="unlabeled"
-        />
-    <!--android:title="Atrás"-->
-
-    <item
-        app:labelVisibilityMode="unlabeled"
-        android:title="Help"
+        android:title="Back"
         app:showAsAction="always" />
-    <item
-        app:labelVisibilityMode="unlabeled"
-        android:title="Sent Items"
-        app:showAsAction="always" />
-
 </group>
 </menu>

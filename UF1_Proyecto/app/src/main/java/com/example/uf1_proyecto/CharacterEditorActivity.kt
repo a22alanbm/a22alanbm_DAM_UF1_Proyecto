@@ -6,12 +6,14 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -43,6 +45,29 @@ class CharacterEditorActivity : AppCompatActivity() {
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setupWithNavController(navController)
 
+        var bottomAppBar = findViewById<BottomAppBar>(R.id.bottomBar)
+
+        bottomAppBar.setNavigationOnClickListener {
+            // Handle navigation icon press
+        }
+
+        bottomAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.goBack -> {
+                    // Handle search icon press
+                    Toast.makeText(this, "Go Back", Toast.LENGTH_SHORT).show()
+                    var navControllerBack = findNavController(R.id.sheet_container_view)
+                    navControllerBack.popBackStack()
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+
+    /*
+
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNav.itemIconSize=200
         val color: Int = resources.getColor(R.color.moraro)
@@ -52,6 +77,8 @@ class CharacterEditorActivity : AppCompatActivity() {
           //navController.popBackStack()
         //}
         //bottomNav.setupWithNavController(navController)
+        */
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
