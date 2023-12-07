@@ -48,7 +48,6 @@ class CharacterEditorActivity : AppCompatActivity() {
 
         var bottomAppBar = findViewById<BottomAppBar>(R.id.bottomBar)
         var atras = bottomAppBar.menu.getItem(0)
-        atras.setIcon(R.drawable.logoadomatras2)
 
         bottomAppBar.setNavigationOnClickListener {
             // Handle navigation icon press

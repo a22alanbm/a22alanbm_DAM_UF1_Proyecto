@@ -12,9 +12,9 @@
     <item
         android:background="@color/rosita"
         android:id="@+id/goBack"
-        android:iconTint="@color/black"
         android:scaleType="centerInside"
-        android:icon="@drawable/logoadomatras"
+        android:icon="@drawable/logoadomatras5"
+        android:iconTint="@color/black"
         android:title="Back"
         app:showAsAction="always"/>
 </group>
