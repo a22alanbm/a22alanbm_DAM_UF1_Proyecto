@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_character"
+
+    >
+
+    <ImageView
+        android:id="@+id/imageCharacter"
+        android:layout_width="172dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/user"
+        app:tint="@color/rosita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/nameCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="36dp"
+        android:text="Name"
+        android:textColor="@color/rosita"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+
+        app:layout_constraintEnd_toStartOf="@+id/botonCharacter"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageCharacter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/conceptCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="21dp"
+        android:text="Concepto"
+        android:textColor="@color/rosita"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonCharacter"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageCharacter"
+        app:layout_constraintTop_toBottomOf="@+id/nameCharacter"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <ImageButton
+        android:id="@+id/botonCharacter"
+        android:src="@drawable/logoadomright"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:layout_width="82dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

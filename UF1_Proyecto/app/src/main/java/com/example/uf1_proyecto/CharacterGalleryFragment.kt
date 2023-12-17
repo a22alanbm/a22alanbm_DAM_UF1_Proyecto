@@ -1,18 +1,25 @@
 package com.example.uf1_proyecto
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.uf1_proyecto.character.CharacterViewModel
+import com.example.uf1_proyecto.character.Personaje
+import com.example.uf1_proyecto.character.PersonajeAdapter
+import com.example.uf1_proyecto.databinding.FragmentCharacterGalleryBinding
 
 
 class CharacterGalleryFragment : Fragment() {
-    //private var _binding: FragmentCharacterGalleryBinding? = null
+    private var _binding: FragmentCharacterGalleryBinding? = null
 
-    //private val binding get() = _binding!!
+    private val binding get() = _binding!!
 
 
     override fun onCreateView(
@@ -20,23 +27,37 @@ class CharacterGalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        //val view = binding?.root
+        _binding = FragmentCharacterGalleryBinding.inflate(inflater, container, false)
 
-        //binding?.button?.setOnClickListener {
-            //go to character editor activity
-            val view = inflater.inflate(R.layout.fragment_character_gallery, container, false)
-            var button = view.findViewById<View>(R.id.button)
+        val view = binding.root
 
+
+
+
+
+            var personajesList = CharacterViewModel.personajesList
+            //Log.i("Funciona la lista?", personajesList.get(0).datos?.nombre.toString())
+
+            binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            val adapter = PersonajeAdapter(personajesList)
+            binding.recyclerView.adapter = adapter
+
+            var button = view.findViewById<View>(R.id.plussymbol)
+//
             button.setOnClickListener {
-                //val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.fragment_container_view) as NavHostFragment
-                //val navController = navHostFragment.navController
-                view.findNavController().navigate(R.id.action_characterGalleryFragment2_to_characterEditorActivity)
-                //view.findNavController().navigate(R.id.action_characterGalleryFragment_to_character_nav_graph)
-
+                var personajeNuevo: Personaje = Personaje()
+                personajeNuevo.datos?.nombre = "Nuevo"
+                personajeNuevo.datos?.concepto = "Nuevo"
+                CharacterViewModel.addPersonaje(personajeNuevo)
+                adapter.refresh()
             }
 
         //}
         return view
     }
 
+
 }
+
+

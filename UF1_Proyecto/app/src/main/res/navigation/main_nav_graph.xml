@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/characterGalleryFragment2"
         android:name="com.example.uf1_proyecto.CharacterGalleryFragment"
-        android:label="fragment_character_gallery"
         tools:layout="@layout/fragment_character_gallery" >
         <action
             android:id="@+id/action_characterGalleryFragment2_to_characterEditorActivity"
@@ -17,15 +16,14 @@
     <activity
         android:id="@+id/characterEditorActivity"
         android:name="com.example.uf1_proyecto.CharacterEditorActivity"
-        android:label="activity_character_editor"
         tools:layout="@layout/activity_character_editor" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.uf1_proyecto.HomeFragment"
-        android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_characterGalleryFragment2"
             app:destination="@id/characterGalleryFragment2" />
     </fragment>
+
 </navigation>

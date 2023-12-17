@@ -5,28 +5,28 @@
     android:icon="@drawable/logoadom2"
     >
 <!-- Resalte de elemento seleccionado -->
- <group android:checkableBehavior="single">
-    <item
-        android:id="@+id/inboxFragment"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Inbox"
-        android:textColor="@color/moraro"
-        app:showAsAction="always" />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/characterGalleryFragment2"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Gallery"
+            android:textColor="@color/moraro"
+            app:showAsAction="always" />
 
-     <item
-         android:id="@+id/homeFragment"
-        android:icon="@android:drawable/ic_menu_send"
-         android:textColor="@color/moraro"
-        android:title="Home"
-        app:showAsAction="always" />
- </group>
-    <item android:title="Support">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@android:drawable/ic_menu_send"
+            android:textColor="@color/moraro"
+            android:title="Home"
+            app:showAsAction="always" />
+    </group>
+    <item android:title="More">
         <menu>
             <item
-                android:id="@+id/helpFragment"
-                android:icon="@android:drawable/ic_menu_help"
+                android:id="@+id/settingsFragment"
+                android:icon="@android:drawable/ic_menu_search"
                 android:textColor="@color/moraro"
-                android:title="Help"
+                android:title="Settings"
                 app:showAsAction="always" />
         </menu>
     </item>

@@ -10,12 +10,81 @@
         android:name="com.example.uf1_proyecto.MainEditingFragment"
         tools:layout="@layout/fragment_main_editing" >
         <action
-            android:id="@+id/action_mainEditingFragment_to_pitosYFlautasFragment"
-            app:destination="@id/pitosYFlautasFragment"
-            app:popUpTo="@id/pitosYFlautasFragment" />
+            android:id="@+id/action_mainEditingFragment_to_characterSaludFragment"
+            app:destination="@id/characterSaludFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterLazosFragment"
+            app:destination="@id/characterLazosFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterHitosFragment"
+            app:destination="@id/characterHitosFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterHabilidadesFragment"
+            app:destination="@id/characterHabilidadesFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterConceptosFragment"
+            app:destination="@id/characterConceptosFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterDramaFragment"
+            app:destination="@id/characterDramaFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterDistorsionFragment"
+            app:destination="@id/characterDistorsionFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterCombateFragment"
+            app:destination="@id/characterCombateFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterCaracteristicasFragment"
+            app:destination="@id/characterCaracteristicasFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterCorduraFragment"
+            app:destination="@id/characterCorduraFragment" />
+        <action
+            android:id="@+id/action_mainEditingFragment_to_characterEquipoFragment"
+            app:destination="@id/characterEquipoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/pitosYFlautasFragment"
-        android:name="com.example.uf1_proyecto.PitosYFlautasFragment"
-        tools:layout="@layout/fragment_pitos_y_flautas" />
+        android:id="@+id/characterCaracteristicasFragment"
+        android:name="com.example.uf1_proyecto.CharacterCaracteristicasFragment"
+        tools:layout="@layout/fragment_character_caracteristicas" />
+    <fragment
+        android:id="@+id/characterCombateFragment"
+        android:name="com.example.uf1_proyecto.CharacterCombateFragment"
+        tools:layout="@layout/fragment_character_combate" />
+    <fragment
+        android:id="@+id/characterConceptosFragment"
+        android:name="com.example.uf1_proyecto.CharacterConceptosFragment"
+        tools:layout="@layout/fragment_character_conceptos" />
+    <fragment
+        android:id="@+id/characterCorduraFragment"
+        android:name="com.example.uf1_proyecto.CharacterCorduraFragment"
+        tools:layout="@layout/fragment_character_cordura" />
+    <fragment
+        android:id="@+id/characterDistorsionFragment"
+        android:name="com.example.uf1_proyecto.CharacterDistorsionFragment"
+        tools:layout="@layout/fragment_character_distorsion" />
+    <fragment
+        android:id="@+id/characterDramaFragment"
+        android:name="com.example.uf1_proyecto.CharacterDramaFragment"
+        tools:layout="@layout/fragment_character_drama" />
+    <fragment
+        android:id="@+id/characterHabilidadesFragment"
+        android:name="com.example.uf1_proyecto.CharacterHabilidadesFragment"
+        tools:layout="@layout/fragment_character_habilidades" />
+    <fragment
+        android:id="@+id/characterHitosFragment"
+        android:name="com.example.uf1_proyecto.CharacterHitosFragment"
+        tools:layout="@layout/fragment_character_hitos" />
+    <fragment
+        android:id="@+id/characterLazosFragment"
+        android:name="com.example.uf1_proyecto.CharacterLazosFragment"
+        tools:layout="@layout/fragment_character_lazos" />
+    <fragment
+        android:id="@+id/characterSaludFragment"
+        android:name="com.example.uf1_proyecto.CharacterSaludFragment"
+        tools:layout="@layout/fragment_character_salud" />
+    <fragment
+        android:id="@+id/characterEquipoFragment"
+        android:name="com.example.uf1_proyecto.CharacterEquipoFragment"
+        tools:layout="@layout/fragment_character_equipo" />
 </navigation>
