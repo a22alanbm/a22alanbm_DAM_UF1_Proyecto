@@ -16,6 +16,10 @@ class PersonajesViewHolder(view: View): RecyclerView.ViewHolder(view){
     fun render(personajeModel: Personaje) {
         binding.nameCharacter.text = personajeModel.datos?.nombre
         binding.conceptCharacter.text = personajeModel.datos?.concepto
+        if(personajeModel.id==69.toString()){
+            binding.imageCharacter.imageTintMode= null
+            binding.imageCharacter.setImageResource(R.drawable.pitosyflautas)
+        }
         //Glide.with(binding.cityImage.context).load(personajeModel.photo).into(binding.cityImage)
 
 
