@@ -46,45 +46,89 @@
     <fragment
         android:id="@+id/characterCaracteristicasFragment"
         android:name="com.example.uf1_proyecto.CharacterCaracteristicasFragment"
-        tools:layout="@layout/fragment_character_caracteristicas" />
+        tools:layout="@layout/fragment_character_caracteristicas" >
+        <action
+            android:id="@+id/action_characterCaracteristicasFragment_self"
+            app:destination="@id/characterCaracteristicasFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterCombateFragment"
         android:name="com.example.uf1_proyecto.CharacterCombateFragment"
-        tools:layout="@layout/fragment_character_combate" />
+        tools:layout="@layout/fragment_character_combate" >
+        <action
+            android:id="@+id/action_characterCombateFragment_self"
+            app:destination="@id/characterCombateFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterConceptosFragment"
         android:name="com.example.uf1_proyecto.CharacterConceptosFragment"
-        tools:layout="@layout/fragment_character_conceptos" />
+        tools:layout="@layout/fragment_character_conceptos" >
+        <action
+            android:id="@+id/action_characterConceptosFragment_self"
+            app:destination="@id/characterConceptosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterCorduraFragment"
         android:name="com.example.uf1_proyecto.CharacterCorduraFragment"
-        tools:layout="@layout/fragment_character_cordura" />
+        tools:layout="@layout/fragment_character_cordura" >
+        <action
+            android:id="@+id/action_characterCorduraFragment_self"
+            app:destination="@id/characterCorduraFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterDistorsionFragment"
         android:name="com.example.uf1_proyecto.CharacterDistorsionFragment"
-        tools:layout="@layout/fragment_character_distorsion" />
+        tools:layout="@layout/fragment_character_distorsion" >
+        <action
+            android:id="@+id/action_characterDistorsionFragment_self"
+            app:destination="@id/characterDistorsionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterDramaFragment"
         android:name="com.example.uf1_proyecto.CharacterDramaFragment"
-        tools:layout="@layout/fragment_character_drama" />
+        tools:layout="@layout/fragment_character_drama" >
+        <action
+            android:id="@+id/action_characterDramaFragment_self"
+            app:destination="@id/characterDramaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterHabilidadesFragment"
         android:name="com.example.uf1_proyecto.CharacterHabilidadesFragment"
-        tools:layout="@layout/fragment_character_habilidades" />
+        tools:layout="@layout/fragment_character_habilidades" >
+        <action
+            android:id="@+id/action_characterHabilidadesFragment_self"
+            app:destination="@id/characterHabilidadesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterHitosFragment"
         android:name="com.example.uf1_proyecto.CharacterHitosFragment"
-        tools:layout="@layout/fragment_character_hitos" />
+        tools:layout="@layout/fragment_character_hitos" >
+        <action
+            android:id="@+id/action_characterHitosFragment_self"
+            app:destination="@id/characterHitosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterLazosFragment"
         android:name="com.example.uf1_proyecto.CharacterLazosFragment"
-        tools:layout="@layout/fragment_character_lazos" />
+        tools:layout="@layout/fragment_character_lazos" >
+        <action
+            android:id="@+id/action_characterLazosFragment_self"
+            app:destination="@id/characterLazosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterSaludFragment"
         android:name="com.example.uf1_proyecto.CharacterSaludFragment"
-        tools:layout="@layout/fragment_character_salud" />
+        tools:layout="@layout/fragment_character_salud" >
+        <action
+            android:id="@+id/action_characterSaludFragment_self"
+            app:destination="@id/characterSaludFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterEquipoFragment"
         android:name="com.example.uf1_proyecto.CharacterEquipoFragment"
-        tools:layout="@layout/fragment_character_equipo" />
+        tools:layout="@layout/fragment_character_equipo" >
+        <action
+            android:id="@+id/action_characterEquipoFragment_self"
+            app:destination="@id/characterEquipoFragment" />
+    </fragment>
 </navigation>

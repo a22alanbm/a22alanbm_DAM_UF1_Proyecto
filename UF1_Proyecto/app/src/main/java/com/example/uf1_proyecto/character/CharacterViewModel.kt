@@ -77,6 +77,39 @@ class CharacterViewModel: ViewModel() {
             }
             data = File(internalStorageDir, "data.json")
         }
+
+        fun siguientePersonaje(){
+            var i = 0
+            for (personaje in personajesList){
+                if (personaje.id == personajeSeleccionado.id){
+                    if (i == personajesList.size-1){
+                        personajeSeleccionado = personajesList.get(0)
+                        break
+                    }else{
+                        personajeSeleccionado = personajesList.get(i+1)
+                        break
+                    }
+                }
+                i++
+            }
+        }
+
+        fun anteriorPersonaje() {
+            var i = 0
+            for (personaje in personajesList){
+                if (personaje.id == personajeSeleccionado.id){
+                    if (i == 0){
+                        personajeSeleccionado = personajesList.get(personajesList.size-1)
+                        break
+                    }else{
+                        personajeSeleccionado = personajesList.get(i-1)
+                        break
+                    }
+                }
+                i++
+            }
+
+        }
     }
 
 

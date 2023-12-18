@@ -11,7 +11,7 @@
     <androidx.fragment.app.FragmentContainerView
 
     android:id="@+id/login_container_view"
-
+    android:background="@color/rositaClaro"
     android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/comicsans"
-            android:text="Agradecimientos"
+            android:text="@string/agradecimientos"
             android:textColor="@color/black" />
     </LinearLayout>
     <!--  https://www.youtube.com/watch?v=PTejW6z0szc  -->

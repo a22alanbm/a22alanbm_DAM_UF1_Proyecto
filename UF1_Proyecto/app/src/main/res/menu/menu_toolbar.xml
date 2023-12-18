@@ -11,17 +11,17 @@
         <menu>
             <item
                 android:id="@+id/closet"
-                android:title="Closet"
+                android:title="@string/closet"
                 android:textColor="@color/moraro"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/wallet"
-                android:title="Wallet"
+                android:title="@string/wallet"
                 android:textColor="@color/moraro"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/photos"
-                android:title="Photos"
+                android:title="@string/photos"
                 android:textColor="@color/moraro"
                 app:showAsAction="always" />
         </menu>

@@ -9,70 +9,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.uf1_proyecto.character.CharacterViewModel
+import com.example.uf1_proyecto.databinding.ActivityCharacterEditorBinding
 import com.example.uf1_proyecto.databinding.FragmentCharacterCaracteristicasBinding
 import com.example.uf1_proyecto.databinding.FragmentCharacterGalleryBinding
 
 class CharacterCaracteristicasFragment : Fragment() {
     private var _binding: FragmentCharacterCaracteristicasBinding? = null
-    private val binding get() = _binding!!
 
+    private var _bindingActivity: ActivityCharacterEditorBinding? = null
+    private val binding get() = _binding!!
+    //private val bindingActivity get() = _bindingActivity!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCharacterCaracteristicasBinding.inflate(inflater, container, false)
-
         val view = binding.root
+        //val viewActivity = bindingActivity.root
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_character_caracteristicas, container, false)
 
 
         var Personaje = CharacterViewModel.getPersonaje()
 
-        if(Personaje?.caracteristicas?.fortaleza?.valor == null){
-            binding.ForNum.setText(0)
-        }else{
-        binding.ForNum.setText(Personaje?.caracteristicas?.fortaleza?.valor.toString())
-        }
-
-        if(Personaje?.caracteristicas?.inteligencia?.valor == null){
-            binding.IntNum.setText(0)
-        }else{
-        binding.IntNum.setText(Personaje?.caracteristicas?.inteligencia?.valor.toString())
-        }
-        if(Personaje?.caracteristicas?.reflejos?.valor == null){
-            binding.RefNum.setText(0)
-        }else{
-            binding.RefNum.setText(Personaje?.caracteristicas?.reflejos?.valor.toString())
-        }
-        if(Personaje?.caracteristicas?.voluntad?.valor == null){
-            binding.VolNum.setText(0)
-        }else{
-            binding.VolNum.setText(Personaje?.caracteristicas?.voluntad?.valor.toString())
-        }
-
-        if (Personaje?.caracteristicas?.fortaleza?.frase == null){
-            binding.ForText.setText("")
-        }else{
-            binding.ForText.setText(Personaje?.caracteristicas?.fortaleza?.frase.toString())
-        }
-        if (Personaje?.caracteristicas?.inteligencia?.frase == null){
-            binding.IntText.setText("")
-        }else{
-            binding.IntText.setText(Personaje?.caracteristicas?.inteligencia?.frase.toString())
-        }
-        if (Personaje?.caracteristicas?.reflejos?.frase == null){
-            binding.RefText.setText("")
-        }else{
-            binding.RefText.setText(Personaje?.caracteristicas?.reflejos?.frase.toString())
-        }
-        if (Personaje?.caracteristicas?.voluntad?.frase == null){
-            binding.VolText.setText("")
-        }else{
-            binding.VolText.setText(Personaje?.caracteristicas?.voluntad?.frase.toString())
-        }
-
+        refresh()
 
         binding.ForNum.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
@@ -189,10 +150,63 @@ class CharacterCaracteristicasFragment : Fragment() {
             }
         })
 
-
-
+        //bindingActivity.imageButtonRight.setOnClickListener {
+        //    CharacterViewModel.siguientePersonaje()
+        //    refresh()
+        //}
+        //bindingActivity.imageButtonLeft.setOnClickListener {
+        //    CharacterViewModel.anteriorPersonaje()
+        //    refresh()
+        //}
 
         return view
+    }
+
+    private fun refresh() {
+        var Personaje = CharacterViewModel.getPersonaje()
+
+        if(Personaje?.caracteristicas?.fortaleza?.valor == null){
+            binding.ForNum.setText(0)
+        }else{
+            binding.ForNum.setText(Personaje?.caracteristicas?.fortaleza?.valor.toString())
+        }
+
+        if(Personaje?.caracteristicas?.inteligencia?.valor == null){
+            binding.IntNum.setText(0)
+        }else{
+            binding.IntNum.setText(Personaje?.caracteristicas?.inteligencia?.valor.toString())
+        }
+        if(Personaje?.caracteristicas?.reflejos?.valor == null){
+            binding.RefNum.setText(0)
+        }else{
+            binding.RefNum.setText(Personaje?.caracteristicas?.reflejos?.valor.toString())
+        }
+        if(Personaje?.caracteristicas?.voluntad?.valor == null){
+            binding.VolNum.setText(0)
+        }else{
+            binding.VolNum.setText(Personaje?.caracteristicas?.voluntad?.valor.toString())
+        }
+
+        if (Personaje?.caracteristicas?.fortaleza?.frase == null){
+            binding.ForText.setText("")
+        }else{
+            binding.ForText.setText(Personaje?.caracteristicas?.fortaleza?.frase.toString())
+        }
+        if (Personaje?.caracteristicas?.inteligencia?.frase == null){
+            binding.IntText.setText("")
+        }else{
+            binding.IntText.setText(Personaje?.caracteristicas?.inteligencia?.frase.toString())
+        }
+        if (Personaje?.caracteristicas?.reflejos?.frase == null){
+            binding.RefText.setText("")
+        }else{
+            binding.RefText.setText(Personaje?.caracteristicas?.reflejos?.frase.toString())
+        }
+        if (Personaje?.caracteristicas?.voluntad?.frase == null){
+            binding.VolText.setText("")
+        }else{
+            binding.VolText.setText(Personaje?.caracteristicas?.voluntad?.frase.toString())
+        }
     }
 
 

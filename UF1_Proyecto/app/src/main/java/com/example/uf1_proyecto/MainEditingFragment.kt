@@ -32,36 +32,47 @@ class MainEditingFragment : Fragment() {
 
         //var BotonHitos = view?.findViewById<View>(R.id.hitosFloatingActionButton)
         binding.hitosFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterHitosFragment)
         }
         binding.caracteristicasFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterCaracteristicasFragment)
         }
         binding.combateFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterCombateFragment)
         }
         binding.conceptosFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterConceptosFragment)
         }
         binding.corduraFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterCorduraFragment)
         }
         binding.distorsionFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterDistorsionFragment)
         }
         binding.dramaFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterDramaFragment)
         }
         binding.habilidadesFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterHabilidadesFragment)
         }
         binding.lazosFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterLazosFragment)
         }
         binding.saludFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterSaludFragment)
         }
         binding.equipoFloatingActionButton.setOnClickListener {
+            CharacterEditorActivity.full=false
             view?.findNavController()?.navigate(R.id.action_mainEditingFragment_to_characterEquipoFragment)
         }
 

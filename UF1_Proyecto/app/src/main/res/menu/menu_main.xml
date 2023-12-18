@@ -9,7 +9,7 @@
         <item
             android:id="@+id/characterGalleryFragment2"
             android:icon="@android:drawable/ic_menu_gallery"
-            android:title="Gallery"
+            android:title="@string/gallery"
             android:textColor="@color/moraro"
             app:showAsAction="always" />
 
@@ -17,7 +17,7 @@
             android:id="@+id/homeFragment"
             android:icon="@android:drawable/ic_menu_send"
             android:textColor="@color/moraro"
-            android:title="Home"
+            android:title="@string/home"
             app:showAsAction="always" />
     </group>
     <item android:title="More">
@@ -26,19 +26,19 @@
                 android:id="@+id/profileFragment"
                 android:icon="@drawable/user"
                 android:textColor="@color/moraro"
-                android:title="Profile"
+                android:title="@string/profile"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/feedbackFragment"
                 android:icon="@android:drawable/ic_menu_agenda"
                 android:textColor="@color/moraro"
-                android:title="Feedback"
+                android:title="@string/feedback"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/settingsFragment"
                 android:icon="@android:drawable/ic_menu_preferences"
                 android:textColor="@color/moraro"
-                android:title="Settings"
+                android:title="@string/settings"
                 app:showAsAction="always" />
 
         </menu>
