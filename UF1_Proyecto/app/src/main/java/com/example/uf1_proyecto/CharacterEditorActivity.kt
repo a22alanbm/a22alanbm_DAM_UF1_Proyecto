@@ -60,6 +60,8 @@ class CharacterEditorActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.goBack -> {
                     // Handle search icon press
+
+
                     onBackPressedDispatcher.onBackPressed()
                     true
                 }

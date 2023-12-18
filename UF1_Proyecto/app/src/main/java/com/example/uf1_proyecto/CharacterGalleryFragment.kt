@@ -43,15 +43,22 @@ class CharacterGalleryFragment : Fragment() {
             val adapter = PersonajeAdapter(personajesList)
             binding.recyclerView.adapter = adapter
 
-            var button = view.findViewById<View>(R.id.plussymbol)
+
 //
-            button.setOnClickListener {
+            binding.plussymbol.setOnClickListener {
                 var personajeNuevo: Personaje = Personaje()
                 personajeNuevo.datos?.nombre = "Nuevo"
                 personajeNuevo.datos?.concepto = "Nuevo"
                 CharacterViewModel.addPersonaje(personajeNuevo)
+                CharacterViewModel.guardarGson()
                 adapter.refresh()
             }
+
+            binding.refresh.setOnClickListener {
+                CharacterViewModel.guardarGson()
+                adapter.refresh()
+            }
+
 
         //}
         return view

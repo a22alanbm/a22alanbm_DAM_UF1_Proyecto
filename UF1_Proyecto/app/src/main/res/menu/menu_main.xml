@@ -23,11 +23,24 @@
     <item android:title="More">
         <menu>
             <item
+                android:id="@+id/profileFragment"
+                android:icon="@drawable/user"
+                android:textColor="@color/moraro"
+                android:title="Profile"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/feedbackFragment"
+                android:icon="@android:drawable/ic_menu_agenda"
+                android:textColor="@color/moraro"
+                android:title="Feedback"
+                app:showAsAction="always" />
+            <item
                 android:id="@+id/settingsFragment"
-                android:icon="@android:drawable/ic_menu_search"
+                android:icon="@android:drawable/ic_menu_preferences"
                 android:textColor="@color/moraro"
                 android:title="Settings"
                 app:showAsAction="always" />
+
         </menu>
     </item>
 </menu>
