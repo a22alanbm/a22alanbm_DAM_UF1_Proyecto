@@ -12,10 +12,11 @@
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_toolbar"
+        android:background="@color/rosita"
+
 
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/rosita"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -43,6 +44,16 @@
         app:menu="@menu/menu_main"
         app:navGraph="@navigation/main_nav_graph"
         />
-
+<!--
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:background="@color/moraro"
+        android:theme="@style/MyBottomNavigation"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/menu_main" />
+-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

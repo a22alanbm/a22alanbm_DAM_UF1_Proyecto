@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 
@@ -43,6 +44,14 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.main_drawer_layout)
         val builder = AppBarConfiguration.Builder(navController.graph)
         builder.setOpenableLayout(drawerLayout)
+
+
+        //val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        //bottomNav.itemIconSize=200
+        //val color: Int = resources.getColor(R.color.moraro)
+        //bottomNav.setupWithNavController(navController)
+
+
 
         val appBarConfiguration = builder.build()
         toolbar.setupWithNavController(navController, appBarConfiguration)
