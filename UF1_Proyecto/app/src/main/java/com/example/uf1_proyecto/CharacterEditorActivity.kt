@@ -18,6 +18,9 @@ class CharacterEditorActivity : AppCompatActivity() {
 
     //private var _binding: ActivityCharacterEditorBinding? = null
     //private val binding get() = _binding!!
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         //_binding = ActivityCharacterEditorBinding.inflate(layoutInflater)
         //val view = binding.root
@@ -70,7 +73,9 @@ class CharacterEditorActivity : AppCompatActivity() {
             string = getString(R.string.confirm)
             builder.setPositiveButton(string,
                 DialogInterface.OnClickListener { dialog, which ->
+
                     CharacterViewModel.removePersonaje(CharacterViewModel.personajeSeleccionado)
+                    if (!full){onBackPressedDispatcher.onBackPressed()}
                     onBackPressedDispatcher.onBackPressed()
                 })
             string = getString(R.string.cancel)
@@ -113,6 +118,17 @@ class CharacterEditorActivity : AppCompatActivity() {
 
                 else -> false
             }
+        }
+
+        var concepto = findViewById<TextView>(R.id.conceptCharacter)
+        var nombre = findViewById<TextView>(R.id.nameCharacter)
+        concepto.setOnClickListener {
+            concepto.setText(CharacterViewModel.personajeSeleccionado.datos?.concepto.toString())
+            nombre.setText(CharacterViewModel.personajeSeleccionado.datos?.nombre.toString())
+        }
+        nombre.setOnClickListener {
+            concepto.setText(CharacterViewModel.personajeSeleccionado.datos?.concepto.toString())
+            nombre.setText(CharacterViewModel.personajeSeleccionado.datos?.nombre.toString())
         }
 
 

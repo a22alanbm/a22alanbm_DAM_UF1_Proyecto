@@ -1,9 +1,10 @@
 package com.example.uf1_proyecto.character
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uf1_proyecto.R
-class PersonajeAdapter(private var personajesList:MutableList<Personaje>) : RecyclerView.Adapter<PersonajesViewHolder>(){
+class PersonajeAdapter( private var personajesList:MutableList<Personaje>) : RecyclerView.Adapter<PersonajesViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonajesViewHolder {
 

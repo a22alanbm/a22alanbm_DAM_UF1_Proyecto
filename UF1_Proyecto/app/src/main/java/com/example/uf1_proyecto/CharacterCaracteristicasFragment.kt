@@ -34,7 +34,6 @@ class CharacterCaracteristicasFragment : Fragment() {
         var Personaje = CharacterViewModel.getPersonaje()
 
         refresh()
-
         binding.ForNum.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (!binding.ForNum.text.isEmpty()){

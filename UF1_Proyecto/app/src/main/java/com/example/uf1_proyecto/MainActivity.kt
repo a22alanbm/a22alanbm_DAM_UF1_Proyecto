@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //Hacer nuestra barra de actividad nuestra barra principal
         val toolbar = findViewById<Toolbar>(R.id.main_toolbar)
-        toolbar.setNavigationIcon(getDrawable(R.drawable.puntitos2) )
-        toolbar.overflowIcon= getDrawable(R.drawable.puntitos2)
-        toolbar.collapseIcon= getDrawable(R.drawable.puntitos2)
+        //toolbar.setNavigationIcon(getDrawable(R.drawable.puntitos2) )
+        //toolbar.overflowIcon= getDrawable(R.drawable.puntitos2)
+        //toolbar.collapseIcon= getDrawable(R.drawable.puntitos2)
 
 
         //if(sharedPreferences==null){
@@ -33,7 +33,11 @@ class MainActivity : AppCompatActivity() {
         //myEditor.put
 
         setSupportActionBar(toolbar?:return)
+        //toolbar.setNavigationIcon(getDrawable(R.drawable.logoadom2))
         getSupportActionBar()?.setDisplayShowTitleEnabled(false);
+        //getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.amordeotromundo);
+        //supportActionBar?.setHomeAsUpIndicator(R.drawable.amordeotromundo)
 
         // Controlador de navegación - Host de navegación (grafo asociado)
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.activity_main_fragment_container_view) as NavHostFragment

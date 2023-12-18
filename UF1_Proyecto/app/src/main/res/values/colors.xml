@@ -3,7 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="moraro">#B539C6</color>
-    <color name="moraroOcuro">#054E1955</color>
+    <color name="moraroOcuro">#554E1955</color>
+    <color name="moraroPocoOcuro">#074E1955</color>
     <color name="rosita">#E0B0FF</color>
     <color name="rositaClaro">#90E0B0FF</color>
+    <color name="rositaNoMuyClaro">#99E0B0FF</color>
 </resources>

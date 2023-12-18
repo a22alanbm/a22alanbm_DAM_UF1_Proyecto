@@ -11,12 +11,15 @@
     android:layout_height="match_parent"
     tools:context=".CharacterGalleryFragment"
     android:orientation="vertical"
+    android:background="@drawable/universe"
+    android:alpha="0.85"
 
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/rosita"
         android:gravity="right"
         >
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -37,7 +40,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="@drawable/universe"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"

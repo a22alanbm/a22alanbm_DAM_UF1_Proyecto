@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/item_character"
-    android:background="@color/moraroOcuro"
+    android:alpha="1"
 
     ><!--android:background="@color/moraroOcuro"-->
 
@@ -31,7 +31,7 @@
         android:shadowRadius="20"
         android:text="@string/name"
         android:textColor="@color/rosita"
-
+        android:background="@color/moraroPocoOcuro"
         android:textSize="16sp"
         android:textStyle="bold"
 
@@ -46,10 +46,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:shadowColor="@color/black"
-        android:shadowRadius="20"
+        android:shadowRadius="100"
         android:text="@string/concepto"
         android:textColor="@color/rosita"
-
+        android:background="@color/moraroPocoOcuro"
         android:textSize="16sp"
         android:textStyle="bold"
 
@@ -65,6 +65,7 @@
         android:src="@drawable/logoadomright"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
+        app:tint="@color/rositaNoMuyClaro"
         android:layout_width="82dp"
         android:layout_height="86dp"
         android:layout_marginEnd="16dp"

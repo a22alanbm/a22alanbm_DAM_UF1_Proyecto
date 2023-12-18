@@ -21,6 +21,12 @@ class CharacterGalleryFragment : Fragment() {
 
     private val binding get() = _binding!!
 
+    override fun onResume() {
+        super.onResume()
+        refresh()
+    }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,6 +68,11 @@ class CharacterGalleryFragment : Fragment() {
 
         //}
         return view
+    }
+
+    fun refresh(){
+        var adapter = PersonajeAdapter(CharacterViewModel.personajesList)
+        adapter.refresh()
     }
 
 
